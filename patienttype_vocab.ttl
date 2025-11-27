@@ -1,0 +1,27 @@
+@prefix hms: <http://example.org/hms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+########################################################################
+# PatientType Vocabulary
+# URI: http://example.org/hms/vocab/PatientType
+########################################################################
+
+hms:PatientType a owl:Class ;
+    rdfs:label "Patient Type" ;
+    rdfs:comment "Controlled vocabulary representing categories of patients in the HMS." .
+
+### ENUM INDIVIDUALS
+
+hms:IdentifiedPatient a hms:PatientType ;
+    rdfs:label "Identified Patient" ;
+    rdfs:comment "A patient whose identity is known and confirmed." .
+
+hms:UnidentifiedPatient a hms:PatientType ;
+    rdfs:label "Unidentified Patient" ;
+    rdfs:comment "A patient with no established identity." .
+
+hms:ReferredPatient a hms:PatientType ;
+    rdfs:label "Referred Patient" ;
+    rdfs:comment "A patient referred from another facility." .
